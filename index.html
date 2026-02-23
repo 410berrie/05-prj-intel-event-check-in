@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,6 +12,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Celebration banner -->
+    <div class="celebration" id="celebration">
+      <div class="celebration-content">
+        <h2><i class="fas fa-trophy"></i> Event Goal Reached!</h2>
+        <p id="celebrationMessage"></p>
+        <button
+          class="celebration-close"
+          onclick="
+            document.getElementById('celebration').style.display = 'none'
+          "
+        >
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+
     <!-- Hero section with Intel branding -->
     <div class="hero">
       <div class="hero-content">
@@ -70,14 +86,17 @@
           <div class="team-card water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <div class="attendee-list" id="waterList"></div>
           </div>
           <div class="team-card zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <div class="attendee-list" id="zeroList"></div>
           </div>
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <div class="attendee-list" id="powerList"></div>
           </div>
         </div>
       </div>
